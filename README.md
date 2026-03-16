@@ -5,55 +5,37 @@ An AI-based system volume controller that allows users to control their computer
 Instead of pressing keyboard keys or using the mouse, the user can increase or decrease the system volume by changing the distance between their thumb and index finger.
 
 🚀 Features
-
-✋ Real-time hand tracking using AI
-
-📷 Uses webcam feed to detect hand gestures
-
-🔊 Control system volume with finger distance
-
-📊 Displays volume percentage bar
-
-⚡ Shows real-time FPS
-
-🧠 Uses MediaPipe Hand Landmark Detection
+<ul>
+<li>✋ Real-time hand tracking using AI</li>
+<li>📷 Uses webcam feed to detect hand gestures</li>
+<li>🔊 Control system volume with finger distance</li>
+<li>📊 Displays volume percentage bar</li>
+<li>⚡ Shows real-time FPS</li>
+<li>🧠 Uses MediaPipe Hand Landmark Detection</li>
+</ul>
 
 🧠 How It Works
-
-The webcam captures live video.
-
-MediaPipe Hands detects hand landmarks (21 key points).
-
+<ul>
+<li>The webcam captures live video.</li>
+<li>MediaPipe Hands detects hand landmarks (21 key points).</li>
 The system tracks:
+<li>Thumb tip (Landmark 4)</li>
+<li>Index finger tip (Landmark 8)</li>
+<li>The distance between these two points is calculated.</li>
+<li>That distance is mapped to the system volume range using interpolation.</li>
+<li>The volume is updated in real time using PyCAW.</li>
+</ul>
 
-Thumb tip (Landmark 4)
-
-Index finger tip (Landmark 8)
-
-The distance between these two points is calculated.
-
-That distance is mapped to the system volume range using interpolation.
-
-The volume is updated in real time using PyCAW.
-
-Thumb ↔ Index Finger Distance → Volume Level
-
-
-Closer fingers → Lower volume
-Farther fingers → Higher volume
+***Thumb ↔ Index Finger Distance → Volume Level***
+***Closer fingers → Lower volume***
+***Farther fingers → Higher volume***
 
 🛠️ Technologies Used
-
 Python
-
 OpenCV
-
 MediaPipe
-
 NumPy
-
 PyCAW (Python Core Audio Windows Library)
-
 Computer Vision
 
 📂 Project Structure
@@ -83,45 +65,26 @@ Thumb & Index Finger Close	Decrease Volume
 Thumb & Index Finger Far	Increase Volume
 
 📊 Output
-
-The system shows:
-
-Hand landmarks
-
-Distance line between fingers
-
-Volume percentage bar
-
-Real-time FPS
+The system shows:Hand landmarks, Distance line between fingers, Volume percentage bar, Real-time FPS.
 
 🔮 Future Improvements
+<ul>
+<li>Add mute gesture</li>
+<li>Control brightness</li>
+<li>Multi-hand gesture support</li>
+<li>Cross-platform audio support</li>
+<li>GUI interface</li>
+</ul>
 
-Add mute gesture
-
-Control brightness
-
-Multi-hand gesture support
-
-Cross-platform audio support
-
-GUI interface
-
-📚 Learning Outcomes
-
+📚 Learning Outcomes:
 Through this project, I learned:
+<ol>
+<li>Real-time computer vision processing</li>
+<li>Hand landmark detection using MediaPipe</li>
+<li>Mapping gesture distance to system-level controls</li>
 
-Real-time computer vision processing
-
-Hand landmark detection using MediaPipe
-
-Mapping gesture distance to system-level controls
-
-Integrating Python with OS audio APIs
 
 👨‍💻 Author
-
 Kavi Jain
-
 Computer Applications Graduate
-
 Interested in AI, Data Science, and Full Stack Development
